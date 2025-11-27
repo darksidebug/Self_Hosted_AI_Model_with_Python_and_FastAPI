@@ -1,0 +1,61 @@
+services:
+  ollama:
+    # image: ollama/ollama:latest
+    build: ./ollama_ai_model
+    container_name: ollama-cpu
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+      # - "C:/Users/Benj Masub/.ollama:/root/.ollama"  # <-- Mount host Ollama data for Windows OS
+      # - ~/.ollama:/root/.ollama  # <-- Mount host Ollama data for Linux/Mac OS
+    restart: unless-stopped
+    networks:
+      - default
+
+  api:
+    build: ./ollama_ai_server
+    container_name: llama-api
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_URL=http://ollama:11434/api/generate
+      - API_KEY=${API_KEY}
+      - RATE_LIMIT_CAPACITY=10
+      - RATE_LIMIT_REFILL_SECONDS=60
+      - RATE_LIMIT_TOKENS_PER_REFILL=10
+    command: >
+      sh -c "
+        echo 'Waiting 10 seconds for Ollama to start...';
+        sleep 10;
+        uvicorn app:app --host 0.0.0.0 --port 8000
+      "
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      retries: 5
+    restart: unless-stopped
+    networks:
+    - default
+
+  nginx:
+    image: nginx:stable
+    container_name: nginx-proxy
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "8002:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+    - default
+
+volumes:
+  ollama_data:
+
+networks:
+  default:
+    name: llm-network
+
