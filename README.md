@@ -1,6 +1,6 @@
 ## **Self-Hosted AI Model (LLaMA 3) with Python + FastAPI**
 
-#### Clone the project
+#### Clone or fork the project
 
 ```bash
 docker compose up -d --build
