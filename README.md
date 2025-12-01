@@ -1,4 +1,4 @@
-##**Self-Hosted AI Model with Python + FastAPI**
+## **Self-Hosted AI Model with Python + FastAPI**
 
 ```bash
 docker compose up -d --build
