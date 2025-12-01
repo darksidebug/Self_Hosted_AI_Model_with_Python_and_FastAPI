@@ -16,3 +16,5 @@ curl -X POST http://localhost:8002/generate \
   -H "Content-Type: application/json" \
   -d '{"prompt":"What is the latest tech as of this year?", "model": "llama3"}'
 ```
+
+- Replace `your_api_key` with your generated key
