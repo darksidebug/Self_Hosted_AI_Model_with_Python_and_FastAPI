@@ -1,4 +1,4 @@
-## **Self-Hosted AI Model with Python + FastAPI**
+## **Self-Hosted AI Model (LLaMA 3) with Python + FastAPI**
 
 #### Clone the project
 
