@@ -1,5 +1,5 @@
-<!-- docker compose --build
-docker run -it -p 11434:11434 ollama/ollama:latest serve -->
+##**Self-Hosted AI Model with Python + FastAPI**
+
 ```bash
 docker compose up -d --build
 ```
