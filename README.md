@@ -3,6 +3,8 @@
 #### Clone or fork the project
 
 ### CD to the project directory
+On your terminal run:
+
 ```bash
 docker compose up -d --build
 ```
