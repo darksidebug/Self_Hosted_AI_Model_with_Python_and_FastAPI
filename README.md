@@ -1,5 +1,9 @@
 # **Self-Hosted AI Model (LlaMA 3) with Python + FastAPI and React.js for frontend**
 
+## key notes to remember, this setup runs on Windows OS, you might need to update the setup if it does not work on Mac OS
+
+HAPPY CHATTING WITH YOUR FIRST SELF-HOSTED AI
+
 ### Clone or fork the project and CD to the project directory
 On your terminal run command below to build the project. I suggest you to fork the project
 
