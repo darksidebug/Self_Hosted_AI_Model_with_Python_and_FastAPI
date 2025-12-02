@@ -169,7 +169,6 @@ const Chats = () => {
                 }}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" && e.shiftKey && prompt) {
-                    // setIsNextLine(true);
                     return;
                   }
 
