@@ -4,6 +4,7 @@ import time
 import json
 import threading
 from typing import AsyncGenerator
+import logging
 
 import requests
 from fastapi import FastAPI, Header, HTTPException, Request
