@@ -220,3 +220,37 @@ const Chats = () => {
 export default Chats
 
 ```
+
+On your frontend `index.css` copy and paste css below
+
+```css
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.ai-response pre {
+  color: #fff;
+  background-color: rgb(62, 60, 60);
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+
+.ai-response pre code {
+  background-color: transparent;
+}
+
+.ai-response code:not(pre code) {
+  background-color: #e0e0e0;
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
+.ai-response p {
+  line-height: 1.7;
+}
+```
+
+### Change the setup to however you want that suits your needs.
+
