@@ -42,6 +42,11 @@ curl -X POST http://localhost:8002/generate \
 - Replace `your_api_key` with your own generated key
 
 ### On the project directory create your react frontend app
+
+```bash
+npm create vite@latest my-react-app   
+```
+
 Install the following packages:
 
 ```text
@@ -268,6 +273,11 @@ On your frontend `index.css` copy and paste css below
 .ai-response p {
   line-height: 1.7;
 }
+```
+
+### CD to your frontend app
+```bash
+npm run dev
 ```
 
 ### Change the setup to however you want that suits your needs.
