@@ -7,8 +7,6 @@ services:
       - "11434:11434"
     volumes:
       - ollama_data:/root/.ollama
-      # - "C:/Users/Benj Masub/.ollama:/root/.ollama"  # <-- Mount host Ollama data for Windows OS
-      # - ~/.ollama:/root/.ollama  # <-- Mount host Ollama data for Linux/Mac OS
     restart: unless-stopped
     networks:
       - default
