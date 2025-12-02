@@ -74,7 +74,7 @@ Install the following packages:
 - remark-gfm
 ```
 
-Here's the snipaste of the Chat UI
+Here's the snipet of the Chat UI
 
 ```jsx
 import { Globe, Paperclip, Plus, Send } from 'lucide-react';
