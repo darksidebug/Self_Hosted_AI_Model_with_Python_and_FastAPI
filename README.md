@@ -51,7 +51,7 @@ Test your AI, on your terminal run:
 curl -X POST http://localhost:8002/generate \
   -H "X-API-KEY: your_api_key" \
   -H "Content-Type: application/json" \
-  -d '{"prompt":"What is the latest tech as of this year?", "model": "llama3"}'
+  -d '{"prompt":"Hi, how are you?", "model": "llama3"}'
 ```
 
 - Note: Replace `your_api_key` with your own generated key
