@@ -33,7 +33,7 @@ NAME             ID         SIZE      MODIFIED
 llama3:latest    ...        ...       ....
 ```
 
-Create a `.env` file on the project directory
+Create a `.env` file on the project root directory
 ```bash
 API_KEY=paste-your-generated-key-here
 ```
