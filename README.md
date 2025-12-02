@@ -2,6 +2,7 @@
 
 ### Clone or fork the project and CD to the project directory
 On your terminal run command below to build the project
+I suggest you to fork the project
 
 ```bash
 docker compose up -d --build
