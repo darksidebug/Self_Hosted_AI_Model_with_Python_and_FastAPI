@@ -1,7 +1,7 @@
 # **Self-Hosted AI Model (LlaMA 3) with Python + FastAPI and React.js for frontend**
 
 
-## Key notes to remember, this setup runs on Windows OS, you might need to update the setup if it does not work on Mac OS
+## Key notes to remember, this setup runs on Windows OS, you might need to update the setup if it does not work on Mac OS. The good thing is I tried this on Mac OS and it's working, I am assuming you won't be having any issues
 
 
 HAPPY CHATTING WITH YOUR FIRST SELF-HOSTED AI
@@ -31,20 +31,12 @@ NAME             ID         SIZE      MODIFIED
 llama3:latest    ...        ...       ....
 ```
 
-Test your AI, on your terminal run:
+Create a `.env` file on the project directory
 ```bash
-curl -X POST http://localhost:8002/generate \
-  -H "X-API-KEY: your_api_key" \
-  -H "Content-Type: application/json" \
-  -d '{"prompt":"What is the latest tech as of this year?", "model": "llama3"}'
+API_KEY=paste-your-generated-key-here
 ```
 
-- Replace `your_api_key` with your own generated key
-- To generate a key
-  - Create a `.env` file on the project directory
-    ```bash
-    API_KEY=paste-your-generated-key-here
-    ```
+To generate a key
   - For user using bash on windows or user using Mac OS/Linux
     ```bash
     openssl rand -hex 32
@@ -53,6 +45,16 @@ curl -X POST http://localhost:8002/generate \
     ```bash
     [System.Guid]::NewGuid().ToString("N")
     ```
+
+Test your AI, on your terminal run:
+```bash
+curl -X POST http://localhost:8002/generate \
+  -H "X-API-KEY: your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{"prompt":"What is the latest tech as of this year?", "model": "llama3"}'
+```
+
+- _Note: Replace `your_api_key` with your own generated key
     
 
 ### On the project directory create your react frontend app
