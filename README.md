@@ -135,7 +135,7 @@ const Chats = () => {
             <div className="relative w-full px-2">
               {(!promptRef?.current?.innerText || !prompt) && (
                 <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none font-normal">
-                  Ask anything with UNI
+                 Chat with AI
                 </span>
               )}
 
