@@ -1,7 +1,7 @@
 # **Self-Hosted AI Model (LlaMA 3) with Python + FastAPI and React.js for frontend**
 
 
-## Key notes to remember, this setup runs on Windows OS, you might need to update the setup if it does not work on Mac OS. The good thing is I tried this on Mac OS and it's working, I am assuming you won't be having any issues
+### Key notes to remember, this setup runs on Windows OS, you might need to update the setup if it does not work on Mac OS. The good thing is I tried this on Mac OS and it's working, I am assuming you won't be having any issues
 
 
 HAPPY CHATTING WITH YOUR FIRST SELF-HOSTED AI
