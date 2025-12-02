@@ -8,6 +8,7 @@ from typing import AsyncGenerator
 import requests
 from fastapi import FastAPI, Header, HTTPException, Request
 from fastapi.responses import StreamingResponse
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://ollama:11434/api/generate")
