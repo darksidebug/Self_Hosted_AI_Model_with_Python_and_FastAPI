@@ -40,6 +40,16 @@ curl -X POST http://localhost:8002/generate \
 ```
 
 - Replace `your_api_key` with your own generated key
+- To generate a key
+  - For user using bash on windows or user using Mac OS/Linux
+    ```bash
+    openssl rand -hex 32
+    ```
+  - For user using windows powershell terminal
+    ```bash
+    [System.Guid]::NewGuid().ToString("N")
+    ```
+    
 
 ### On the project directory create your react frontend app
 
